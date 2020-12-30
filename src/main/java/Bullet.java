@@ -18,7 +18,7 @@ public class Bullet extends Tank {
         }
 
         move();
-        collision();
+        //collision();
         g.drawImage(image[getDirection().ordinal()], x, y, null);
     }
 
@@ -58,7 +58,14 @@ public class Bullet extends Tank {
             //進行碰撞
             if (getRectangle().intersects(object.getRectangle())) {
                 if (object instanceof Tank) {
-                    object.setAlive(false);
+                    ((Tank) object).hp--;
+                    if(object instanceof PlayerTank) System.out.println("ouch!");
+                    if(object instanceof EnemyTank) System.out.println("hit!");
+
+                    if (((Tank) object).hp <= 0) {
+
+                        object.setAlive(false);
+                    }
                 }
                 isCollision = true;
 

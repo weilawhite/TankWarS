@@ -5,7 +5,9 @@ import java.util.Random;
 
 public class EnemyTank extends Tank {
     public EnemyTank(int x, int y, Direction direction, boolean enemy, Image[] image) {
+
         super(x, y, direction, enemy, image);
+        hp=1;
     }
 
     public void ai() {

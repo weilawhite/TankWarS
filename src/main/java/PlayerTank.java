@@ -5,6 +5,7 @@ import java.awt.*;
 public class PlayerTank extends Tank implements SuperFire{
     public PlayerTank(int x, int y, Direction direction, Image[] image) {
         super(x, y, direction, image);
+        hp=3;
     }
 
     @Override

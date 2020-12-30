@@ -6,6 +6,7 @@ import java.awt.*;
 public class Tank extends GameObject {
     private int speed;
     private Direction direction;
+    protected int hp;
     protected boolean dirs[] = new boolean[4];
 
     public Direction getDirection() {
@@ -125,8 +126,8 @@ public class Tank extends GameObject {
         boolean isCollision=false;
 
         for (GameObject object : TankGame.getGameClient().getGameObjects()) {
-            if (object != this && getRectangle().intersects(object.getRectangle())) {
-                System.out.println("hit");
+            if (object != this && !(object instanceof Bullet)&& getRectangle().intersects(object.getRectangle())) {
+                //System.out.println("hit");
                 x = oldX;
                 y = oldY;
                 isCollision=true;

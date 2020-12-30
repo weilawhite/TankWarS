@@ -147,8 +147,11 @@ public class GameClient extends JComponent {
 //
         if (gameWin) {
             System.out.println("win");
+            //此處加入遊戲重設
+
+
         } else {
-            System.out.println(gameObjects.size());
+            //System.out.println(gameObjects.size());
         }
     }
 
