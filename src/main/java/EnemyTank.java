@@ -26,7 +26,7 @@ public class EnemyTank extends Tank {
 
     private void getNewDirection() {
         Random random = new Random();
-
+//
 //重置四方向為false
         for (int i = 0; i <= 3; i++) {
             dirs[i] = false;
